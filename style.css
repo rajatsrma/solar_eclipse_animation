@@ -1,0 +1,85 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: skyblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: skyChange 8s linear forwards;
+}
+
+.sun {
+  position: relative;
+  width: 106px;
+  height: 106px;
+  border-radius: 50%;
+  background-color: yellow;
+  box-shadow: 0px 0px 20px rgb(184, 226, 100);
+  animation: sunGlare 0.5s ease infinite;
+}
+.moon {
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  background-color: rgb(206, 206, 202);
+  animation: eclipse 8s linear forwards;
+}
+
+@keyframes eclipse {
+  0% {
+    transform: translateX(0px);
+    background-color: skyblue;
+    opacity: 0.95;
+  }
+  43% {
+    transform: translateX(-105px);
+    background-color: black;
+    opacity: 1;
+  }
+  57% {
+    transform: translateX(-105px);
+    background-color: black;
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-210px);
+    background-color: skyblue;
+    opacity: 0.95;
+  }
+}
+@keyframes skyChange {
+  0% {
+    background-color: skyblue;
+  }
+  43% {
+    background-color: black;
+  }
+  57% {
+    background-color: black;
+  }
+  100% {
+    background-color: skyblue;
+  }
+}
+@keyframes sunGlare {
+  0% {
+    box-shadow: 0px 0px 20px rgb(184, 226, 100);
+  }
+  25% {
+    box-shadow: 0px 0px 22px rgb(184, 226, 100);
+  }
+  50% {
+    box-shadow: 0px 0px 24px rgb(184, 226, 100);
+  }
+  75% {
+    box-shadow: 0px 0px 22px rgb(184, 226, 100);
+  }
+  100% {
+    box-shadow: 0px 0px 20px rgb(184, 226, 100);
+  }
+}
